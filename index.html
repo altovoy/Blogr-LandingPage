@@ -20,15 +20,15 @@
 
 <body>
   <div class="container">
+
     <div class="header white">
-      <div class="nav-bar">
-        <div>
-
+      <div class="mid-container">
+        <div class="nav-bar">
           <h1>Blogr</h1>
-          <nav class="menu">
-            <ul>
+          <div id="nav-bar" class="menu">
+            <nav class="nav-items">
               <div class="dropdown">
-                <li><a href="">Product</a><img src='images/icon-arrow-light.svg'></li>
+                <a href="">Product</a><img src='images/icon-arrow-light.svg'>
                 <div class="dropdown-content">
                   <a href="#">Link 1</a>
                   <a href="#">Link 2</a>
@@ -37,7 +37,7 @@
               </div>
 
               <div class="dropdown">
-                <li><a href="">Company</a><img src='images/icon-arrow-light.svg'></li>
+                <a href="">Company</a><img src='images/icon-arrow-light.svg'>
                 <div class="dropdown-content">
                   <a href="#">Link 1</a>
                   <a href="#">Link 2</a>
@@ -45,36 +45,178 @@
                 </div>
               </div>
               <div class="dropdown">
-                <li><a href="">Connect</a><img src='images/icon-arrow-light.svg'></li>
+                <a href="">Connect</a><img src='images/icon-arrow-light.svg'>
                 <div class="dropdown-content">
                   <a href="#">Contact</a>
                   <a href="#">Newsletter</a>
                   <a href="#">LinkedIn</a>
                 </div>
               </div>
-            </ul>
-          </nav>
+            </nav>
+
+            <div class="log-buttons">
+              <input class="button ghost white" type="button" value="Login">
+              <input class="button filled" type="button" value="Sign Up">
+            </div>
+          </div>
+
+
+          <input type="image" id="burger-button" src='images/icon-hamburger.svg'>
         </div>
 
-        <div>
-          <input class="button ghost white" type="button" value="Login">
-          <input class="button filled" type="button" value="Sign Up">
-        </div>
-      </div>
+        <div class="header-content">
 
-      <div class="header-content">
-
-        <h1>A modern publishing platform</h1>
-        <h4>Grow your audience and build your online brand</h4>
-        <div>
-          <input class="button filled" type="button" value="Start for free">
-          <input class="button outlined white" type="button" value="Learn More">
+          <h1>A modern publishing platform</h1>
+          <h4>Grow your audience and build your online brand</h4>
+          <div>
+            <input class="button filled" type="button" value="Start for free">
+            <input class="button outlined white" type="button" value="Learn More">
+          </div>
         </div>
       </div>
     </div>
 
 
+    <div class="mid-container">
+      <section id="designed-future" >
+
+        <div class="center">
+          <h2>Designed for the future</h2>
+        </div>
+
+        <div class="two-cols">
+          <div class="mid-col">
+            <br>
+            <h3>Introducing an extensible editor</h3>
+
+            <p>Blogr features an exceedinlgy intituitive interface wich lets you focus on
+              one thing: creating content. The editor supports management of multiple blogs
+              and allows easy manipulation of embeds such as images, videos and Markdown. Extensible
+              with plugins and themes provide easy ways to add functionality or change the looks of a blog
+            </p>
+
+            <h3>Robust content management</h3>
+            <p>
+              Flexible content management enables user to easily move trough posts.
+              Increase the usability of your blog by adding customized
+              categories, sections, format, or flow. With this functionality, you're in
+              full control.
+            </p>
+          </div>
+
+          <img  src="images/illustration-editor-desktop.svg" >
+        </div>
+      </section>
+
+    </div>
+    <section id="state-art">
+      <div class="mid-container two-cols">
+        <div class="mid-col">
+          <img  src="images/illustration-phones.svg" >
+        </div>
+
+        <div class="mid-col white">
+          <h2>State of the Art Infraestructure</h2>
+
+          <p>
+            With realibility and speed in mind, wolrdwide data center provide the
+            backbone for ultra-fast connectivity. This ensures your site will load
+            instantly, no matter where your readers are, keeping your site competitive.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="simple">
+      <div class="mid-container two-cols">
+        <div class="mid-col">
+          <img src="images/illustration-laptop-desktop.svg" >
+        </div>
+
+        <div class="mid-col" >
+          <h2>Free, open, simple</h2>
+          <p>Blogr is a free and open source aplication backed by a large community
+            of helpful developers. It supports features such as code sntax highlithting, RSS
+            feeds, social media integration, third party commenting tools, and works seamlessly
+            with Google Analytics. The architecture is clean and is relatively easy yo learn.
+          </p>
+
+          <h2>Powerful tooling</h2>
+          <p>
+            Batteries included. We built a simple and straightforward CLI tool that makes customization
+            and deployment a breeze, but capable of producing even the most complicated sites.
+          </p>
+
+
+        </div>
+      </div>
+    </section>
+
+    <footer class="mid-container white">
+
+        <div>
+          <h1>Blogr</h1>
+        </div>
+
+        <div>
+          <p>Product</p>
+          <ul>
+            <li><a>Overview</a></li>
+            <li><a>Pricing</a></li>
+            <li><a>Marketplace</a></li>
+            <li><a>Features</a></li>
+            <li><a>Integrations</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p>Company</p>
+          <ul>
+            <li><a>About</a></li>
+            <li><a>Team</a></li>
+            <li><a>Blog</a></li>
+            <li><a>Careers</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p>Connect</p>
+          <ul>
+            <li><a>Contact</a></li>
+            <li><a>Newsletter</a></li>
+            <li><a>LinkedIn</a></li>
+          </ul>
+        </div>
+    </footer>
+
   </div>
+
 </body>
+
+
+<script>
+  const burgerButton = document.getElementById('burger-button')
+  const navBar = document.getElementById('nav-bar')
+  burgerButton.addEventListener("click", toogleBurgerState)
+  let burgerOpen = false;
+  window.matchMedia("(min-width: 900px)").addListener(disableBurger)
+
+  function toogleBurgerState() {
+    if (burgerOpen) {
+      disableBurger()
+    } else {
+      navBar.classList.replace('menu', 'burger')
+      burgerButton.src = 'images/icon-close.svg'
+      burgerOpen = true
+    }
+  }
+
+  function disableBurger() {
+    navBar.classList.replace('burger', 'menu')
+    burgerButton.src = 'images/icon-hamburger.svg'
+    burgerOpen = false
+  }
+
+</script>
 
 </html>
