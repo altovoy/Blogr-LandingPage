@@ -53,6 +53,7 @@ body{
 .mid-container {
     padding: 30px 8vw;
     height: inherit;
+    overflow: hidden;
 }
 
 .header{
@@ -277,8 +278,7 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     height: inherit;
-    /* margin: 0; */
-    padding: 0;
+    margin: 0;
 }
 
 .mid-col {
@@ -287,7 +287,7 @@ a:hover {
 }
 
 section { 
-    margin: 150px 0;
+    margin: 10% 0;
     position: relative
 }
 
@@ -301,9 +301,8 @@ section {
 
 #designed-future img {
     position: absolute;
-    top: -30%;
     right: -28.5%;
-    width: 800px;
+    width: 55vw;
     overflow: hidden;
 }
 
@@ -326,8 +325,8 @@ section {
 #state-art img{
     position: absolute;
     top: -130px;
-    left: 5vw;
-    width: 680px;
+    left: 3vw;
+    width: 50vw;
     overflow: hidden;
     
 }
@@ -336,14 +335,11 @@ section {
     margin: auto 50px;
 }
 
-#simple {
-    height: 786px;
-}
 
 #simple img {
-    position: absolute;
-    top: 0;
-    left: -15%;
+    position: relative;
+    left: -35%;
+    width: 60vw;
     overflow: hidden;
 }
 
@@ -371,6 +367,90 @@ footer ul {
     padding: 0;
 }
 
+
+
+@media only screen and (max-width: 680px) {
+
+    .two-cols {
+        text-align: center;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    
+    #designed-future img{
+        position: relative;
+        top: initial;
+        right: initial;
+        width: 140%;
+        overflow: hidden;
+    }
+
+    #state-art{
+        border-radius: 0 50px;
+        margin-top: 50%;
+    }
+
+    
+
+    #state-art img {
+    position: absolute;
+    top: -50%;
+    height: 100%;
+    width: auto;
+    overflow: hidden;
+    /* z-index: 0; */
+}
+
+    #simple img {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    
+    .mid-col {
+        width: 100%;
+        position: inherit;
+    }
+
+
+    
+
+}
+
+@media only screen and (max-width: 450px) {
+
+    #state-art img {
+        position: absolute;
+    
+    left: 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    }
+
+}
+
+
+@media only screen and (max-width: 450px) {
+
+
+    footer {
+        background-color: var(--very-dark-black-blue);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        border-top-right-radius: 100px;
+        text-align: center;
+    }
+
+    
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (min-width: 600px) {
